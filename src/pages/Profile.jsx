@@ -43,9 +43,8 @@ const Profile = () => {
                      <input className='' type="text" placeholder='Email' value='ayo@gmail.com' readonly />
                 </div>
                 <button>Save</button>
-                <div className={profPic ? 'prof-view' : 'transform-scale'}
-                // className="prof-view"
-                >
+                <div className={profPic ? 'prof-view' : 'transform-scale'}>
+                <div className="x"  onClick={handleProfPic}>+</div>
             <img src={img} alt=""  />
             </div> 
 

@@ -9,6 +9,7 @@
 .arrow{
     height: 5vh;
     padding: 20px 40px;
+    // border: 2px solid red;
 }
 .arrow img{
     height: 40px;
@@ -24,7 +25,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    // color: red;font-size: 10px;
 
 }
 .file-btn{
@@ -52,6 +52,7 @@
 }
 .bank-details{
     display: flex;
+    
 }
 .bank-details, .bank, .acct-name, .bank-num, .pay{
     font-size: 30px;
@@ -67,6 +68,7 @@
     font-weight: 500;
     cursor: pointer;
     margin-top: 7%;
+    
 }
 // .submit-receipt:disabled{
 //     background: #000;
@@ -80,9 +82,11 @@
     cursor: pointer;
     font-size: 14px;
     font-weight: 600;
+   
     
 }
 .upload{
+    
     font-size: 15px;
     color:  rgb(255, 255, 255);
 }
@@ -124,13 +128,25 @@
     width: 90%;
 }
 @media only screen and (max-width:975px){
+
+    .payment-box{
+        justify-content: flex-start;
+        min-height:100vh;
+        padding-bottom: 40px;
+    }
+    .arrow{
+        padding-top: 30px;
+        padding-bottom: 30px;
+        // border: 2px solid red;
+    }
     .arrow img{
         height: 20px;
         width: 30px;
     }
     .pay{
        width: 90%;
-       height: 30%;
+       height: fit-content;
+       padding:25px 10px ;
     }
     .account{
         width: 90%;
@@ -175,9 +191,22 @@
 }
 }
 @media only screen and (max-width:475px){
+    .payment-box{
+        height: fit-content;
+        padding-bottom: 40px;
+    }
+    .account{
+        padding-bottom: 40px;
+    }
     .bank-details, .bank, .acct-name, .bank-num, .pay {
         font-size: 17px;
         font-weight: 500;
+    }
+    .paidd{
+        width: fit-content;
+        height: fit-content;
+        padding: 3px 10px;
+        margin-bottom: 20px;
     }
 }
 @media only screen and (max-width:399px){
