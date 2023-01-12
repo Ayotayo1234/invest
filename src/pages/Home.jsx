@@ -15,7 +15,7 @@ const Home = () => {
         let comma = new Intl.NumberFormat('en-US', {});
    
     const buy = async () => { 
-      const response = await axios.post(`http://nupat-lms.alimisamuel.com/api/v1/share/create-share/${JSON.parse(localStorage.getItem('nupatInvestor')).data.id}`, {
+      const response = await axios.post(`https://nupat-lms.alimisamuel.com/api/v1/share/create-share/${JSON.parse(localStorage.getItem('nupatInvestor')).data.id}`, {
         name: name,
         unit: unit ,
         total: comma.format(cat),

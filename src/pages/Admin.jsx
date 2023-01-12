@@ -9,7 +9,7 @@ const Admin = () => {
  
       const token = JSON.parse(localStorage.getItem('nupatInvestor')).token
   const handleLogin = async () => {
-    const response = await axios.get('http://nupat-lms.alimisamuel.com/api/v1/user/getUsers', {
+    const response = await axios.get('https://nupat-lms.alimisamuel.com/api/v1/user/getUsers', {
       headers: {
         'Authorization': `Bearer ${token}`
 

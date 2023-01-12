@@ -31,7 +31,7 @@ if(auth){
   //   setIsActive(current => !current);
   // };
   const handleLogin = async () => {
-    const response = await axios.post('http://nupat-lms.alimisamuel.com/api/v1/auth/login', {
+    const response = await axios.post('https://nupat-lms.alimisamuel.com/api/v1/auth/login', {
 	email: email,
 	password:password,
 })
@@ -52,7 +52,7 @@ if(response.status === 201 ){
 }
   };
   const handleSignup = async () => {
-    const response = await axios.post('http://nupat-lms.alimisamuel.com/api/v1/user/register', {
+    const response = await axios.post('https://nupat-lms.alimisamuel.com/api/v1/user/register', {
   email: upEmail,
 	password:upPassword,
   phoneNo:phone,
