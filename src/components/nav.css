@@ -1,0 +1,132 @@
+.nav, .nav-close{
+  background: rgb(0, 124, 64);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-weight: 500;
+    font-size: 20px;
+    transition-duration: 1s;
+    color: rgb(166, 250, 209);
+    padding: 5px;
+    gap: 2px;
+    z-index: 1;
+  }
+  a{
+    text-decoration: none;
+    cursor: pointer;
+  }
+  /* .navvv{
+    background: #000;
+    display: flex;
+    width: 100vw;
+  } */
+  .nav-logo-txt{
+    /* background: rgb(203, 253, 203); */
+    display:"flex" !important;
+    /* margin-right:"20px"; */
+    flex-direction: row;
+  }
+ 
+  .ham{
+   display: none;
+  }
+  .nav-link{
+    height: 50px;
+    display: flex !important;
+    color: white;
+    align-items: center !important;
+    padding: 20px !important;
+    cursor: pointer;
+
+  }
+  .nav-link:hover{
+    background: rgb(20, 225, 140);
+    color: rgb(0, 56, 29) !important;
+
+  }
+  .active{
+    background: rgb(20, 225, 140) !important;
+    color: rgb(0, 56, 29) !important;
+  }
+  .nav-bar{
+    z-index: 9;
+  }
+  #active-id{
+    background: rgb(248, 5, 5);
+  }
+  #id{
+    background: #000;
+  }
+  .title{
+   width: 60%;
+    color: rgb(253, 253, 253);
+    font-weight: 500;
+  }
+  .welcome img{
+    width: 50px;
+    height: 50px;
+    border-radius: 6px;
+}
+.welcome{
+  height: fit-content;
+  display: flex;
+  gap: 20px;
+  margin: 30px 0;
+  background: rgb(255, 255, 255);
+  color: rgb(15, 87, 52)!important ;
+  padding: 10px;
+  border-radius: 6px;
+  width: 100%;
+  /* justify-content: center; */
+  align-self: baseline;
+}
+a .welcome-txt{
+  color: rgb(15, 87, 52)!important ;
+  margin-top: auto;
+}
+.welcome-txt{
+ margin: auto;
+ /* font-size: 2px;
+ font-weight: 700; */
+}
+ 
+  @media only screen and (max-width:800px){
+    .nav-close , .nav-bar {
+      width: 60%;
+      position: absolute;
+      right: 40%;
+      padding-right: 20px;
+      height: 100vh;
+      z-index:1;
+      
+    }
+ 
+    .ham{
+      margin: 20px;
+      position: absolute;
+      background: rgba(141, 140, 140, 0.301);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      cursor: pointer;
+
+    }
+    .nav a, .nav .a{
+      margin-left:5%;
+      color: rgb(255, 255, 255);
+      /* width: 100%; */
+    }
+    .nav{
+      padding-left: 20px;
+      width: 50%;
+      position: absolute;
+      right: 100%;
+      height: 100vh;
+      z-index: 9.9999999;
+    }
+  }
