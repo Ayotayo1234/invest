@@ -75,7 +75,7 @@ object-fit: cover;
 .sec-auth{
   height: 100vh;
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   width: 100%;
   padding:0 50px;
@@ -94,7 +94,11 @@ object-fit: cover;
     border: none;
   }
   .sec-auth{
-    padding:0 20px
+    padding:0 20px;
+  // justify-content: flex-start;
+  // align-items: flex-start;
+  height: fit-content;
+ 
   }
   
   .sec-login{
