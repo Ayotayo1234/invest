@@ -9,7 +9,7 @@ const Dashboard = () => {
   return (
     <div className="profile">
         <Nav/>
-        <div className="prof-section">
+        <div className="profiles">
           <div className="">
           <div className="section-1">
      <div className="details">

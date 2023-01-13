@@ -69,9 +69,6 @@ const Nav = () => {
             
            
     </div>
-    {/* <div className="other-nav">
-      hello
-    </div> */}
     </div>
   )
 }

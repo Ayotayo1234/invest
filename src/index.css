@@ -11,9 +11,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: rgb(255, 255, 255);
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 code {

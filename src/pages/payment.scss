@@ -9,7 +9,6 @@
 .arrow{
     height: 5vh;
     padding: 20px 40px;
-    // border: 2px solid red;
 }
 .arrow img{
     height: 40px;
@@ -37,12 +36,6 @@
     height: 80%;
     color: white;
     padding-left: 20px;
-    // font-size: 15px;
-    // font-weight: 500;
-    // padding: 20px;
-    // display: flex;
-    // flex-direction: column;
-    // gap: 30px;
 }
 .bank-details span{
     color: rgb(0, 124, 65);
@@ -70,9 +63,6 @@
     margin-top: 7%;
     
 }
-// .submit-receipt:disabled{
-//     background: #000;
-// }
 .submit-receipt{
     color:  rgb(0, 124, 65);
      background:  rgb(255, 255, 255);
@@ -137,7 +127,6 @@
     .arrow{
         padding-top: 30px;
         padding-bottom: 30px;
-        // border: 2px solid red;
     }
     .arrow img{
         height: 20px;
@@ -170,10 +159,6 @@
 .sucess .name{
     font-size: 20px;
 }
-// .sucess .name{
-//     color: rgb(0, 255, 60);
-//     font-size: 10px;
-// }
 .btns{
     margin-top: 2%;
     margin-right: 5%;
@@ -187,7 +172,6 @@
 .sucess{
     justify-content: space-evenly;
     gap: 20px;
-    // flex-direction: row;
 }
 }
 @media only screen and (max-width:475px){

@@ -6,6 +6,7 @@
 
  }
 .prof{
+    overflow: scroll;
     padding: 20px;
     width: 100%;    
     gap: 10px;
@@ -101,7 +102,7 @@ button{
     display: none;
 }
 .prof-view img, .transform-scale img{
-    width: 40%;
+    width: 30%;
 }
 .transform-scale{
     position: absolute;
@@ -139,8 +140,8 @@ transform:  rotateY(0deg) ;
     align-items: center;
     font-weight:600;
     position: absolute;
-    top: 3vw;
-    right:4vw;
+    top: 1vw;
+    right: 10vw;
     width: 50px;
     height:50px;
     background: rgba(0, 93, 48, 0.627);
@@ -149,6 +150,10 @@ transform:  rotateY(0deg) ;
     transform:  rotateZ(50deg) ;
 }
 @media only screen and (max-width:800px){
+    .prof{
+        // max-height: 100vh;
+        justify-content: unset;
+    }
     .profile{
         overflow: scroll;
         // min-height: 100vh;
@@ -175,8 +180,9 @@ transform:  rotateY(0deg) ;
     }
     .prof{
         flex-direction: column;
-        overflow: scroll;
+        // overflow: scroll;
         padding-top: 50px;
+        height: 100vh;
     }
     .one{
         display: none;

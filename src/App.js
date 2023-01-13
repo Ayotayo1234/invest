@@ -5,7 +5,7 @@ import LoginSignup from './pages/LoginSignup'
 import Payment from './pages/Payment';
 import Profile from './pages/Profile';
 import Admin from './pages/Admin';
-import ContactUs from './pages/ContactUs';
+// import ContactUs from './pages/ContactUs';
 import Dashboard from './pages/Dashboard';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
            <Route path='/profile' element={<Profile/>}/>
            <Route path='/admin' element={<Admin/>}/>
            <Route path='/dashboard' element={<Dashboard/>}/>
-           <Route path='/contact' element={<ContactUs/>}/>
+           {/* <Route path='/contact' element={<ContactUs/>}/> */}
       </Routes>
       {/* <Home/> */}
     </div>

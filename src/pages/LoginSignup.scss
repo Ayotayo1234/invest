@@ -1,6 +1,4 @@
 .body{
-  // height: 100vh;
-  // width: 100vw;
   overflow: scroll;
   display: flex;
   flex-direction: column;
@@ -75,7 +73,6 @@ object-fit: cover;
 .sec-auth{
   height: 100vh;
   display: flex;
-  // justify-content: center;
   align-items: center;
   width: 100%;
   padding:0 50px;
@@ -95,8 +92,6 @@ object-fit: cover;
   }
   .sec-auth{
     padding:0 20px;
-  // justify-content: flex-start;
-  // align-items: flex-start;
   height: fit-content;
  
   }
