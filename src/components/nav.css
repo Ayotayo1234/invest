@@ -1,3 +1,9 @@
+.navvv{
+  background: #000;
+  position: fixed;
+  width: 100%;
+
+}
 .nav, .nav-close{
   background: rgb(0, 124, 64);
     width: 300px;
@@ -18,11 +24,7 @@
     text-decoration: none;
     cursor: pointer;
   }
-  /* .navvv{
-    background: #000;
-    display: flex;
-    width: 100vw;
-  } */
+  /*  */
   .nav-logo-txt{
     /* background: rgb(203, 253, 203); */
     display:"flex" !important;
