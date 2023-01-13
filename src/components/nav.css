@@ -1,5 +1,6 @@
 .navvv{
  height: fit-content;
+ z-index: 9;
 }
 .nav, .nav-close{
   background: rgb(0, 124, 64);
