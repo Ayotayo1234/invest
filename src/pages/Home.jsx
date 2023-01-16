@@ -1,20 +1,40 @@
 import './LoginSignup.scss';
 import './Home.scss';
-import React, {  useState } from 'react'
+import React, {  useEffect, useState } from 'react'
 import { createSearchParams,  useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import Nav from '../components/Nav';
+import Spinner from '../components/Spinner';
 
 const Home = () => {
+  
     const [unit, setUnit] = useState(0)
     const [amount] = useState(500)
-    // const [total, setTotal] = useState(0)
+    const [disabled, setDisabled] = useState(true)
+    const [responseSpin, setResponseSpin] = useState(false)
     const [name] = useState(JSON.parse(localStorage.getItem('nupatInvestor')).data.fullName)
     const navigate = useNavigate();
     const cat = unit* amount
         let comma = new Intl.NumberFormat('en-US', {});
-   
+       
+        const disabledBtn =  () => {
+           if( unit <= 0){
+          setDisabled(true)
+          console.log(disabled);
+        }else if (unit > 1000){
+          setDisabled(true)
+          console.log(disabled);
+        }else{
+          setDisabled(false)
+        }
+        } 
+useEffect(
+  disabledBtn
+)
+// const refresh = () => window.location.reload(true)
+
     const buy = async () => { 
+      setResponseSpin(true)
       const response = await axios.post(`https://nupat-lms.alimisamuel.com/api/v1/share/create-share/${JSON.parse(localStorage.getItem('nupatInvestor')).data.id}`, {
         name: name,
         unit: unit ,
@@ -22,7 +42,7 @@ const Home = () => {
  
       }
     )
-    if(response.status === 201){
+    if(response.status === 201 && disabled === false){
       navigate({
             pathname: '/payment',
             search: createSearchParams({
@@ -32,6 +52,9 @@ const Home = () => {
             }).toString()
         })
 
+    }else{
+      setResponseSpin(false)
+      window.location.reload(true)
     }
 
        
@@ -42,7 +65,7 @@ const Home = () => {
         <div className='home-body'>
       <div className="home-container">
         <Nav/>
-<div className="b-box">
+        {responseSpin ? <Spinner/> : <div className="b-box">
      <div className="box">
       <div className="products">
           Unit available
@@ -97,11 +120,11 @@ const Home = () => {
       {/* <div className='content-total'> </div> */}
       
     </div>
-     <div className="buy-total" onClick={buy}>
+     <div className={disabled ? 'disabled' : "buy-total"} onClick={buy}>
       Buy
     </div>
   </div>
-</div>
+</div>}
       </div>
 </div>
     </div>

@@ -3,17 +3,20 @@ import axios from 'axios';
 import './LoginSignup.scss';
 import { createSearchParams, useNavigate } from 'react-router-dom';
 import run from './img/illustration_login.png'
+import Spinner from '../components/Spinner';
 
 
 
 const LoginSignup = () => {
   const [signUp, setSignUp] = useState(true)
+  const [isView, setIsView] = useState(true)
   const [email, setEmail] = useState('')
 const [password, setPassword] = useState('')
 const [upEmail, setupEmail] = useState('')
 const [upPassword, setupPassword] = useState('')
 const [phone, setphone] = useState('')
 const [name, setname] = useState('')
+const [responseSpin, setResponseSpin] = useState(false)
 
   // const [isActive, setIsActive] = useState(false);
   const navigate = useNavigate()
@@ -31,10 +34,13 @@ if(auth){
   //   setIsActive(current => !current);
   // };
   const handleLogin = async () => {
+    setResponseSpin(true)
     const response = await axios.post('https://nupat-lms.alimisamuel.com/api/v1/auth/login', {
 	email: email,
 	password:password,
 })
+
+// console.log(response);
 
 if(response.status === 201 ){
   localStorage.setItem('nupatInvestor', JSON.stringify(response.data))
@@ -70,10 +76,14 @@ if(response.status === 201 ){
     setSignUp(!signUp);
   };
 
+  const viewPassword = () => {
+    setIsView(!isView)
+  }
   
   return (
     <div className="body">
-      <div className="" style={{ width:"100vw"}}>
+     { responseSpin ? <Spinner /> : <>
+     <div className="" style={{ width:"100vw"}}>
         <div className="logo"></div>
       </div>
       <div className="sec-auth">
@@ -96,10 +106,14 @@ if(response.status === 201 ){
         </label>
         <label className="label">
           {/* <span className="span">Password</span> */}
-          <input className="input" type="password" 
+          <div className="input-view" style={{display:"flex",alignItems:"center"}}>
+          <input className="input" type={ isView ? 'password' : 'text'} 
           onChange={(e)=> setPassword(e.target.value)} 
           value={password}
           placeholder="Password"/>
+           <i class={ isView ? 'fa fa-eye-slash' : 'fa fa-eye'} onClick={viewPassword} ></i>
+           {/* <i class="fa fa-eye-slash"></i> */}
+          </div>
         </label>
         <p className="forgot-pass">Forgot password?</p>
         {/* <Link  to='/profile'> */}
@@ -138,13 +152,13 @@ if(response.status === 201 ){
           </label>
           <button type="button" className="submit" onClick={handleSignup}>Sign Up</button>
           <div className="span" onClick={handleNewSignup}>
-           Already have an account?<span> Sign-In</span>
+           Already have an account?<span> Sign-In </span>
           </div>
         </div>
         </div>
         
     </div>
-  
+     </> }
     </div>
   )
 }

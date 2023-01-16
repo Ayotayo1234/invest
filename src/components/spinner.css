@@ -1,0 +1,30 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100);
+.spinnerBody{
+    background-color: #91daa183;
+     color: black; 
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     width: 100%;
+     min-height: 100vh;
+     min-width: 100vw;
+     
+    }
+#loading {
+    display: inline-block;
+    width: 70px;
+    height: 70px;
+    border: 3px solid rgba(27, 255, 103, 0.623);
+    border-radius: 50%;
+    border-top-color: rgb(0, 68, 20);
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+  @-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
